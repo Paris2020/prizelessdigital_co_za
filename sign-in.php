@@ -1,3 +1,9 @@
+<?php
+
+  session_start();
+  include 'includes/db_connect.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +22,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <img src="themes/prizelessdigital/images/logo.jpg"/>
-    <form action="include/signup.inc.php" method="POST">
+    <form action="includes/signin.inc.php" method="POST">
 
       <input type="email" name="email" class="form-control" placeholder="Enter email address"><br>
       <input type="password" name="password" class="form-control" placeholder="Enter password"><br>
