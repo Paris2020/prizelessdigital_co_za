@@ -9,13 +9,57 @@
   <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="themes/prizelessdigital/css/style.css">
 </head>
-<body>
 
+
+<body>
 <!-- Dashboard -->
 
-<div class="container">
-  <div class="row justify-content-center">
+
+
+<div class="container-fluid padding">
+  <div class="row text-center">
+    <div class="col-12">
+      <h1>Welcome to Prizeless Digital</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+
     <img src="themes/prizelessdigital/images/logo.jpg">
+    <div class="col-sm-4">
+        <div class="card">
+          <img src="">
+          <div class="card-body">
+            <h5 class="card-title">Service 1</h5>
+            <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
+            <a href="#" class="btn btn-primary btn-lg">Read more</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+          <img src="">
+          <div class="card-body">
+            <h5 class="card-title">Service 2</h5>
+            <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
+            <a href="#" class="btn btn-primary btn-lg">Read more</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+          <img src="">
+          <div class="card-body">
+            <h5 class="card-title">Service 3</h5>
+            <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
+            <a href="#" class="btn btn-primary btn-lg">Read more</a>
+          </div>
+        </div>
+    </div>
+
   </div>
 </div>
 
