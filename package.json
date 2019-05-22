@@ -1,0 +1,31 @@
+{
+  "name": "prizelessdigital",
+  "version": "1.0.0",
+  "description": "Prizeless Gigital Theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Paris2020/prizelessgigital_co_za.git"
+  },
+  "keywords": [
+    "Sign",
+    "Up",
+    "Form"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paris2020/prizelessgigital_co_za/issues"
+  },
+  "homepage": "https://github.com/Paris2020/prizelessgigital_co_za#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-css-globbing": "^0.2.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
