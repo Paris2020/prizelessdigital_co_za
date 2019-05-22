@@ -20,7 +20,9 @@
 
       <input type="email" name="email" class="form-control" placeholder="Enter email address"><br>
       <input type="password" name="password" class="form-control" placeholder="Enter password"><br>
-      <input type="submit" name="submit" value="Sign In" class="btn btn-primary"><br>
+      <input type="submit" name="submit" value="Sign In" class="btn btn-primary"><br><br>
+      <span>OR</span><br><br>
+      <a href="sign-up.php" class="">Signup if you don't have an account</a>
     </form>
   </div>
 </div>
