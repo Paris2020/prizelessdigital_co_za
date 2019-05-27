@@ -7,8 +7,8 @@
 
     #Login with email adddress and newly created password.
 
-    $email = mysqli_escape_string($connection, $_POST['email']);
-    $password = mysqli_escape_string($connection, $_POST['password']);
+    $email = mysqli_real_escape_string($connection, $_POST['email']);
+    $password = mysqli_real_escape_string($connection, $_POST['password']);
 
     #Query the database to check login details
     $sql = "SELECT * FROM new_user WHERE email='$email' AND password='$password'";
