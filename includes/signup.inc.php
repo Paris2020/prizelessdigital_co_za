@@ -7,12 +7,11 @@
 
     #Fetch data entered in the form and submit to the the database.
 
-    $username = mysql_escape_string($_POST['username']);
-    $email = mysql_escape_string($_POST['email']);
-    $phonenum = mysql_escape_string($_POST['phonenum']);
-    $password = mysql_escape_string($_POST['password']);
-    $confirmpass = mysql_escape_string($_POST['confirmpassword']);
-
+    $username = mysqli_real_escape_string($connection, $_POST['username']);
+    $email = mysqli_real_escape_string($connection, $_POST['email']);
+    $phonenum = mysqli_real_escape_string($connection, $_POST['phonenum']);
+    $password = mysqli_real_escape_string($connection, $_POST['password']);
+    $confirmpass = mysqli_real_escape_string($connection, $_POST['confirmpassword']);
 
 
     #Check if any field is left empty
@@ -31,8 +30,8 @@
         #Let's make sure that the email address doesn't already exist in the database
 
         $sql = "SELECT * FROM new_user WHERE email= '$email'";
-        $emailCheck = mysql_query($connection, $sql);
-        $db_result = mysql_num_rows($emailCheck);
+        $emailCheck = mysqli_query($connection, $sql);
+        $db_result = mysqli_num_rows($emailCheck);
       }
       if($password != $confirmpass){
         #If the passwords are not the same return the user to the form
@@ -46,7 +45,13 @@
 
         $sql = "INSERT INT0 new_user (username, email, phonemum, password, confirmpassword)
                 VALUES ('$username','$email','$phonenum','$password','$confirmpass')";
-        mysql_query($connection, $sql);
+
+
+        $reval = mysqli_query($connection, $sql);
+
+        if(!$retval){
+          die('Could not enter data into: ' . $dbName . mysqli_error());
+        }
         header("Location: ../sign-in.php");
       }
     }
