@@ -43,15 +43,10 @@
       }else{
         #Insert the data into the dataabase
 
-        $sql = "INSERT INT0 new_user (username, email, phonemum, password, confirmpassword)
+        $sql = "INSERT INTO new_user (username, email, phonenum, password, confirmpassword)
                 VALUES ('$username','$email','$phonenum','$password','$confirmpass')";
 
-        echo $sql;
-        $reval = mysqli_query($connection, $sql);
-
-        if(!$retval){
-          die('Could not enter data into: ' . $dbName . mysqli_error($connection));
-        }
+        mysqli_query($connection, $sql);
         header("Location: ../sign-in.php");
       }
     }
