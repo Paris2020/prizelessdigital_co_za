@@ -24,20 +24,19 @@
 
 
 
-<div class="container-fluid padding">
+<div class="container-fluid">
   <div class="row text-center">
     <div class="col-12">
       <h1><?php echo $username; ?></h1>
       <h1>Welcome to Prizeless Digital</h1>
+      <img src="themes/prizelessdigital/images/logo.jpg">
     </div>
   </div>
 </div>
 
 
-<div class="container-fluid padding">
-  <div class="row text-center padding">
-
-    <img src="themes/prizelessdigital/images/logo.jpg">
+<div class="container-fluid">
+  <div class="row text-center">
     <div class="col-sm-4">
         <div class="card">
           <img src="themes/prizelessdigital/images/construction-project-management1.jpg">
