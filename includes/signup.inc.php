@@ -46,11 +46,11 @@
         $sql = "INSERT INT0 new_user (username, email, phonemum, password, confirmpassword)
                 VALUES ('$username','$email','$phonenum','$password','$confirmpass')";
 
-
+        echo $sql;
         $reval = mysqli_query($connection, $sql);
 
         if(!$retval){
-          die('Could not enter data into: ' . $dbName . mysqli_error());
+          die('Could not enter data into: ' . $dbName . mysqli_error($connection));
         }
         header("Location: ../sign-in.php");
       }
