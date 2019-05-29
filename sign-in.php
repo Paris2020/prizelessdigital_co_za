@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="themes/pricelessdigital/css/style.css">
 </head>
-<body>
+<body class="grid">
 
 <!-- Signin Form -->
 
