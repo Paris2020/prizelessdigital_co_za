@@ -13,7 +13,6 @@
     #Query the database to check login details
     $sql = "SELECT * FROM new_user WHERE email='$email' AND password='$password'";
     $resultCheck = mysqli_query($connection, $sql);
-    //echo $resultCheck;
 
 
     #If the database returns 1 then same the email as a session
