@@ -1,6 +1,6 @@
 var themename = 'themes/prizelessdigital';
 
-var gulp - require('gulp'),
+var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
