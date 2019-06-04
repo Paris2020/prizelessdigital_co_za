@@ -1,0 +1,39 @@
+// BASE FONT VARIABLES
+// =============================================================================
+
+$base-font-size:    16;
+$base-line-height:  24;
+
+
+$open-sans: "open-sans", Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+// FONT INCLUDES
+// =============================================================================
+
+
+// FONT MIXINS
+// =============================================================================
+//Opensans
+@mixin font-light {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin font-regular {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-semi-bold {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 700;
+}
