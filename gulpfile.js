@@ -1,91 +1,78 @@
-'use strict';
+var themename = 'themes/prizelessdigital';
+
+var gulp - require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    browserSync = require('browser-sync').create(),
+    reload = browserSync.reload,
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    imagemin = require('gulp-imagemin');
 
 
-//Seting directories up
-var themes_folder = 'themes';
-
-var path = {
-    theme:  themes_folder + '/prizelessdigital/',
-    scss:   'sass',
-    css:    'css',
-    js:     'js'
-};
-
-//Require plugins to be in use below through functions
-var gulp          = require('gulp'),
-    sass          = require('gulp-sass'),
-    sourcemaps    = require('gulp-sourcemaps'),
-    autoprefixer  = require('gulp-autoprefixer'),
-    browserSync   = require('browser-sync'),
-    fs            = require('fs'),
-    reload        = browserSync.reload;
+var root = '../' + themename + '/',
+    scss = root + 'sass/',
+    js = root + 'src/js/';
 
 
-// Set paths e.g path.sass is actually themes/prizelessdigital/sass
-path.scss   = path.theme + path.scss;
-path.css    = path.theme + path.css;
-path.js     = path.theme + path.js;
+var phpWatchFiles = root + '**/*.php',
+    styleWatchFiles = scss + '**/*.scss';
+
+var cssSRC = [
+
+    root + 'src/css/bootstrap-4.3.1/*.css',
+    root + 'style.css'
+];
 
 
-// These are the files we want to watch
-var phpWatchFiles = '**/*.php',
-    styleWatchFiles = path.scss +'**/*.scss';
+var imgSRC = root + 'src/images/*',
+    imgDEST = root + 'dist/images';
 
 
-if( fs.existsSync('./domain.json') ) {
-    var domain        = require('./domain.json');
-}
 
-/*
-- 1) This function will process the styles.scss file
--
-- 2)
--
-- 3)
--
-- 4)
-*/
-
-
-//1
 function css(){
 
-    return gulp.src([path.scss + 'stytles.scss'])
-    .pipe(sourcemaps.init({loadMaps:true}))
+    return gulp.src([scss + 'style.scss'])
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass({
         outputStyle: 'expanded'
-    }).on('error', path.sass.logError))
-    .pipe(autoprefixer('last 10 versions', 'ie 10'))
+    }).on('error', sass.logError))
+    .pipe(autoprefixer('last 10 versions'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.css));
-
+    .pipe(gulp.dest(root));
 }
 
 
-//2
-function watch(){
+function imgmin(){
+    return gulp.src(imgSRC)
+    .pipe(changed(imgDEST))
+    .pipe(imagemin([
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.jpegtran({progressive: true})
+        imagemin.optipng({optimizationLevel: 5})
 
+    ]))
+    .pipe(gulp.dest(imgDEST));
+}
+
+
+function watch(){
     browserSync.init({
         open: 'external',
-        proxy: domain,
-        startPath: "",
-        files: path.css + '/*.css',
-        notify: false,
-        logConnections: true,
-        reloadOnRestart: true,
+        proxy: 'http://localhost/git'
+        port: 8000,
     });
-    gulp.watch(styleWatchFiles, css);
-    gulp.watch(phpWatchFiles).on('change', browserSync.reload);
+    gulp.watch(styleWatchFiles, gulp.series({css}));
+    gulp.watch(imgSRC, imgmin);
+    gulp.watch([phpWatchFiles, root + 'style.css']).on('change', browserSync.reload);
+
 }
 
 
-//3
 exports.css = css;
+exports.imgmin = imgmin;
 exports.watch = watch;
 
-
-//4
-var build = gulp.parallel(watch);
+var build = gulp.paralell(watch);
 gulp.task('default', build);
 
 
