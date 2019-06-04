@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
     sass = require('gulp-sass'),
+    globbing = require('gulp-css-globbing'),
     sourcemaps = require('gulp-sourcemaps'),
     imagemin = require('gulp-imagemin'),
     fs = require('fs');
@@ -38,6 +39,7 @@ var imgSRC = root + 'src/images/*',
 function css(){
 
     return gulp.src([scss + 'styles.scss'])
+    .pipe(globbing({ extensions: ['.scss'] }))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass({
         outputStyle: 'expanded'
