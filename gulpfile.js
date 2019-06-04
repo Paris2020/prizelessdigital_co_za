@@ -6,10 +6,16 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    fs = require('fs');
 
 
-var root = '../' + themename + '/',
+if( fs.existsSync('./domain.json') ) {
+    var domain = require('./domain.json');
+}
+
+
+var root = themename + '/',
     scss = root + 'sass/',
     js = root + 'src/js/';
 
@@ -31,23 +37,29 @@ var imgSRC = root + 'src/images/*',
 
 function css(){
 
-    return gulp.src([scss + 'style.scss'])
+    return gulp.src([scss + 'styles.scss'])
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass({
         outputStyle: 'expanded'
     }).on('error', sass.logError))
-    .pipe(autoprefixer('last 10 versions'))
+    .pipe(autoprefixer('last 2 versions'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(root));
 }
 
+
+function printCSS(){
+    return gulp.src(cssSRC)
+    .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
+    .pipe(gulp.dest(root));
+}
 
 function imgmin(){
     return gulp.src(imgSRC)
     .pipe(changed(imgDEST))
     .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
-        imagemin.jpegtran({progressive: true})
+        imagemin.jpegtran({progressive: true}),
         imagemin.optipng({optimizationLevel: 5})
 
     ]))
@@ -58,10 +70,11 @@ function imgmin(){
 function watch(){
     browserSync.init({
         open: 'external',
-        proxy: 'http://localhost/git'
-        port: 8000,
+        proxy: domain,
+        port: 8888,
     });
-    gulp.watch(styleWatchFiles, gulp.series({css}));
+    gulp.watch("*.html").on('change', reload);
+    gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
     gulp.watch(imgSRC, imgmin);
     gulp.watch([phpWatchFiles, root + 'style.css']).on('change', browserSync.reload);
 
@@ -69,10 +82,11 @@ function watch(){
 
 
 exports.css = css;
+exports.printCSS = printCSS;
 exports.imgmin = imgmin;
 exports.watch = watch;
 
-var build = gulp.paralell(watch);
+var build = gulp.parallel(watch);
 gulp.task('default', build);
 
 
