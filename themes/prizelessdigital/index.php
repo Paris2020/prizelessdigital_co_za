@@ -29,7 +29,7 @@
     <div class="col-12">
       <h1><?php echo $username; ?></h1>
       <h1>Welcome to Prizeless Digital</h1>
-      <img src="themes/prizelessdigital/src/images/logo.jpg">
+      <img src="/themes/prizelessdigital/src/images/logo.jpg">
     </div>
   </div>
 </div>
@@ -39,7 +39,7 @@
   <div class="row text-center">
     <div class="col-sm-4">
         <div class="card">
-          <img src="themes/prizelessdigital/src/images/construction-project-management1.jpg">
+          <img src="/themes/prizelessdigital/src/images/construction-project-management1.jpg">
           <div class="card-body">
             <h5 class="card-title">Service 1</h5>
             <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
@@ -49,7 +49,7 @@
     </div>
     <div class="col-sm-4">
         <div class="card">
-          <img src="themes/prizelessdigital/src/images/04-as_medical_equipment_683-ab.jpg">
+          <img src="/themes/prizelessdigital/src/images/04-as_medical_equipment_683-ab.jpg">
           <div class="card-body">
             <h5 class="card-title">Service 2</h5>
             <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
@@ -59,7 +59,7 @@
     </div>
     <div class="col-sm-4">
         <div class="card">
-          <img src="themes/prizelessdigital/src/images/small_business.jpg">
+          <img src="/themes/prizelessdigital/src/images/small_business.jpg">
           <div class="card-body">
             <h5 class="card-title">Service 3</h5>
             <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
