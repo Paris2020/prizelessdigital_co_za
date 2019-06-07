@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include 'includes/db_connect.inc.php';
+  include '/themes/prizelessdigital/includes/db_connect.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +12,8 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital</title>
-  <link rel="stylesheet" href="themes/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="themes/pricelessdigital/style.css">
+  <link rel="stylesheet" href="/themes/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/themes/pricelessdigital/style.css">
 </head>
 <body class="grid">
 
@@ -21,20 +21,20 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <img src="themes/prizelessdigital/src/images/logo.jpg"/>
-    <form action="themes/pricelessdigital/includes/signin.inc.php" method="POST">
+    <img src="/themes/prizelessdigital/src/images/logo.jpg"/>
+    <form action="/themes/pricelessdigital/includes/signin.inc.php" method="POST">
 
       <input type="email" name="email" class="form-control" placeholder="Enter email address"><br>
       <input type="password" name="password" class="form-control" placeholder="Enter password"><br>
       <input type="submit" name="submit" value="Sign In" class="btn btn-primary"><br><br>
       <span>OR</span><br><br>
-      <a href="pricelessdigital/sign-up.php" class="link">Signup if you don't have an account</a>
+      <a href="/themes/pricelessdigital/sign-up.php" class="link">Signup if you don't have an account</a>
     </form>
   </div>
 </div>
 
 
 <!-- Javascript files -->
-<script src="themes/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+<script src="/themes/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
