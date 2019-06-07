@@ -73,7 +73,7 @@ function watch(){
     browserSync.init({
         open: 'external',
         proxy: domain,
-        port: 8889,
+        port: 8888,
     });
     gulp.watch("*.html").on('change', reload);
     gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
