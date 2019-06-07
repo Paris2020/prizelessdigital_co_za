@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     globbing = require('gulp-css-globbing'),
     sourcemaps = require('gulp-sourcemaps'),
     imagemin = require('gulp-imagemin'),
-    fs = require('fs');
+    fs = require('fs'),
+    php = require('gulp-connect-php');
 
 
 if( fs.existsSync('./domain.json') ) {
@@ -19,6 +20,8 @@ if( fs.existsSync('./domain.json') ) {
 var root = themename + '/',
     scss = root + 'sass/',
     js = root + 'src/js/';
+
+    //db_connect = root + 'includes/db_connect.inc.php'
 
 
 var phpWatchFiles = root + '**/*.php',
@@ -69,13 +72,32 @@ function imgmin(){
 }
 
 
+function php(){
+
+    return php.server({
+        base: './prizelessdigital_co_za',
+        port: 8888,
+        keepalive: true
+    });
+
+}
+
+
 function watch(){
     browserSync.init({
         open: 'external',
         proxy: domain,
-        port: 8888,
+        host: 'local.prizelessdigital.co.za.dev',
+         port: 8080,
+        files: [ root + 'style.css',
+               root + '/src/js/*.js'],
+        ghostMode: {
+            clicks: true,
+            forms: true,
+            scroll: false
+        }
     });
-    gulp.watch("*.html").on('change', reload);
+    gulp.watch('*.html').on('change', reload);
     gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
     gulp.watch(imgSRC, imgmin);
     gulp.watch([phpWatchFiles, root + 'style.css']).on('change', browserSync.reload);
@@ -87,6 +109,7 @@ exports.css = css;
 exports.printCSS = printCSS;
 exports.imgmin = imgmin;
 exports.watch = watch;
+exports.php = php;
 
 var build = gulp.parallel(watch);
 gulp.task('default', build);
