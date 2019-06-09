@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include '/themes/prizelessdigital/includes/db_connect.inc.php';
+  include 'themes/prizelessdigital/includes/db_connect.inc.php';
 
   $username = $_SESSION['username'];
 ?>
@@ -14,12 +14,12 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital</title>
-  <link rel="stylesheet" href="/themes/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/themes/prizelessdigital/style.css">
+  <link rel="stylesheet" href="themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="themes/prizelessdigital/styles.css">
 </head>
 
 
-<body>
+<body class="grid">
 <!-- Dashboard -->
 
 
@@ -72,6 +72,6 @@
 </div>
 
 <!-- Javascript files -->
-<script src="/themes/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+<script src="/themes/prizelessdigital/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
