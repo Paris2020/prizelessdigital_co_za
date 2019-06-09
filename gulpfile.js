@@ -30,7 +30,7 @@ var phpWatchFiles = root + '**/*.php',
 var cssSRC = [
 
     root + 'src/css/bootstrap-4.3.1/*.css',
-    root + 'style.css'
+    root + 'styles.css'
 ];
 
 
@@ -72,10 +72,10 @@ function imgmin(){
 }
 
 
-function php(){
+function phpConnect(){
 
     return php.server({
-        base: './prizelessdigital_co_za',
+        base: './',
         port: 8888,
         keepalive: true
     });
@@ -87,10 +87,9 @@ function watch(){
     browserSync.init({
         open: 'external',
         proxy: domain,
-        host: 'local.prizelessdigital.co.za.dev',
-         port: 8080,
-        files: [ root + 'style.css',
-               root + '/src/js/*.js'],
+        baseDir: './',
+        files: [ root + 'styles.css',
+                 root + '/src/js/*.js'],
         ghostMode: {
             clicks: true,
             forms: true,
@@ -100,7 +99,7 @@ function watch(){
     gulp.watch('*.html').on('change', reload);
     gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
     gulp.watch(imgSRC, imgmin);
-    gulp.watch([phpWatchFiles, root + 'style.css']).on('change', browserSync.reload);
+    gulp.watch([phpWatchFiles, root + 'styles.css']).on('change', browserSync.reload);
 
 }
 
@@ -109,11 +108,7 @@ exports.css = css;
 exports.printCSS = printCSS;
 exports.imgmin = imgmin;
 exports.watch = watch;
-exports.php = php;
+exports.phpConnect = phpConnect;
 
-var build = gulp.parallel(watch);
+var build = gulp.parallel(watch, phpConnect);
 gulp.task('default', build);
-
-
-
-
