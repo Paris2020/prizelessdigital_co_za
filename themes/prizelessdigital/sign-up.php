@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/themes/prizelessdigital/styles.css">
 </head>
-<body>
+<body class="grid">
 
 
 <!-- Signup Form -->

@@ -18,7 +18,7 @@
     //echo "<script>alert('Database connection was successful!!')</script>";
     $db_select = mysqli_select_db($connection, $dbName);
     if(!$db_select){
-      die('Can\'t use ' . $dbName . ': ' . mysqli_error());
+      die('Can\'t use ' . $dbName . ': ' . mysqli_error($connection));
     }
   }
 

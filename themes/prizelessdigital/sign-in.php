@@ -12,8 +12,8 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital Assessment</title>
-  <link rel="stylesheet" href="/themes/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/themes/pricelessdigital/style.css">
+  <link rel="stylesheet" href="/themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/themes/pricelessdigital/styles.css">
 </head>
 <body class="grid">
 
@@ -35,6 +35,6 @@
 
 
 <!-- Javascript files -->
-<script src="/themes/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+<script src="/themes/prizelessdigital/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
