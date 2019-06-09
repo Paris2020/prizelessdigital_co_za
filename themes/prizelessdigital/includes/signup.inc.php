@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include 'db_connect.inc.php';
+  include './../../includes/db_connect.inc.php';
 
   if(isset($_POST['submit'])){
 
@@ -17,7 +17,7 @@
     #Check if any field is left empty
     if(empty($username) || empty($email) || empty($phonenum) || empty($password) || empty($confirmpass)){
       #Return the user to the form
-      header("Location: ../sign-up.php?EMPTY=FIELDS=DETECTED");
+      header("Location: index.php?EMPTY=FIELDS=DETECTED");
       exit();
 
     }else{
@@ -25,7 +25,7 @@
 
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Invalid email address entry')</script>";
-        echo "<script>window.open('../sign-up.php','_self')</script>";
+        echo "<script>window.open('index.php','_self')</script>";
       }else{
         #Let's make sure that the email address doesn't already exist in the database
 
@@ -37,7 +37,7 @@
         #If the passwords are not the same return the user to the form
         #Display and error message
 
-        header("Location: ../sign-up.php");
+        header("Location: index.php");
         exit();
 
       }else{
@@ -47,7 +47,7 @@
                 VALUES ('$username','$email','$phonenum','$password','$confirmpass')";
 
         mysqli_query($connection, $sql);
-        header("Location: ../sign-in.php");
+        header("Location: themes/prizelessdigital/sign-in.php");
       }
     }
 

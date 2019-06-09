@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include 'db_connect.inc.php';
+  require_once(__DIR__.'/includes/db_connect.inc.php');
 
   if(isset($_POST['submit'])){
 
@@ -20,12 +20,12 @@
     if(mysqli_num_rows($resultCheck) == 1){
       $_SESSION['email'] = $_POST['email'];
       $_SESSION['username'] = $_POST['username'];
-      header("Location: ../index.php");
+      header("Location: /themes/prizelessdigital/dashboard.php");
 
     }else{
 
       echo "<script>alert('Email or Pasword is invalid!')</script>";
-      echo "<script>window.open('../sign-in.php','_self')</script>";
+      echo "<script>window.open('/themes/prizelessdigital/sign-in.php','_self')</script>";
     }
 
 
