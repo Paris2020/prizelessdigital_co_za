@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
-  <title>Prizeless Digital</title>
+  <title>Prizeless Digital Assessment</title>
   <link rel="stylesheet" href="/themes/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="/themes/pricelessdigital/style.css">
 </head>
