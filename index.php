@@ -1,9 +1,7 @@
 <?php
 
   session_start();
-  include 'themes/prizelessdigital/includes/db_connect.inc.php';
-
-  $username = $_SESSION['username'];
+  include './../../includes/db_connect.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,61 +15,30 @@
   <link rel="stylesheet" href="themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="themes/prizelessdigital/styles.css">
 </head>
-
-
 <body class="grid">
-<!-- Dashboard -->
 
 
+<!-- Signup Form -->
 
-<div class="container-fluid">
-  <div class="row text-center">
-    <div class="col-12">
-      <h1><?php echo $username; ?></h1>
-      <h1>Welcome to Prizeless Digital</h1>
-      <img src="/themes/prizelessdigital/src/images/logo.jpg">
-    </div>
-  </div>
-</div>
+<div class="container-fluid padding">
+  <div class="row content-center padding">
 
-
-<div class="container-fluid">
-  <div class="row text-center">
-    <div class="col-sm-4">
-        <div class="card">
-          <img src="/themes/prizelessdigital/src/images/construction-project-management1.jpg">
-          <div class="card-body">
-            <h5 class="card-title">Service 1</h5>
-            <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
-            <a href="#" class="btn btn-primary btn-lg">Read more</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card">
-          <img src="/themes/prizelessdigital/src/images/04-as_medical_equipment_683-ab.jpg">
-          <div class="card-body">
-            <h5 class="card-title">Service 2</h5>
-            <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
-            <a href="#" class="btn btn-primary btn-lg">Read more</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card">
-          <img src="/themes/prizelessdigital/src/images/small_business.jpg">
-          <div class="card-body">
-            <h5 class="card-title">Service 3</h5>
-            <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.</p>
-            <a href="#" class="btn btn-primary btn-lg">Read more</a>
-          </div>
-        </div>
-    </div>
+    <img src="themes/prizelessdigital/src/images/logo.jpg"/>
+    <form action="./../../includes/signup.inc.php" method="POST">
+      <input type="text" name="username" class="form-control" placeholder="Enter username"><br>
+      <input type="email" name="email" class="form-control" placeholder="Enter email address"><br>
+      <input type="text" name="phonenum" class="form-control" placeholder="Enter phone number"><br>
+      <input type="password" name="password" class="form-control" placeholder="Enter password"><br>
+      <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm password"><br>
+      <input type="submit" name="submit" value="Sign Up" class="btn btn-primary"><br>
+      <a href="themes/prizelessdigital/sign-in.php" class="btn btn-danger">Cancel</a>
+    </form>
 
   </div>
 </div>
+
 
 <!-- Javascript files -->
-<script src="/themes/prizelessdigital/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+<script src="themes/prizelessdigital/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
