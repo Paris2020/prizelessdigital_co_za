@@ -25,6 +25,7 @@ var root = themename + '/',
 
 
 var phpWatchFiles = root + '**/*.php',
+    indexPhpWatchFile = 'index.php',
     styleWatchFiles = scss + '**/*.scss';
 
 var cssSRC = [
@@ -99,7 +100,7 @@ function watch(){
     gulp.watch('*.html').on('change', reload);
     gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
     gulp.watch(imgSRC, imgmin);
-    gulp.watch([phpWatchFiles, root + 'styles.css']).on('change', browserSync.reload);
+    gulp.watch([phpWatchFiles, indexPhpWatchFile, root + 'styles.css']).on('change', browserSync.reload);
 
 }
 
