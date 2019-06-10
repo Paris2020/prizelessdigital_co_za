@@ -15,30 +15,73 @@
   <link rel="stylesheet" href="themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="themes/prizelessdigital/styles.css">
 </head>
+
 <body class="grid">
 
 
-<!-- Signup Form -->
+  <header class="header">
+    <div class="inner">
+      <div class="img-wrapper">
+        <img src="themes/prizelessdigital/src/images/logo.jpg"/>
+      </div>
+    </div>
+  </header>
 
-<div class="container-fluid padding">
-  <div class="row content-center padding">
+  <!-- Signup Form -->
 
-    <img src="themes/prizelessdigital/src/images/logo.jpg"/>
-    <form action="./../../includes/signup.inc.php" method="POST">
-      <input type="text" name="username" class="form-control" placeholder="Enter username"><br>
-      <input type="email" name="email" class="form-control" placeholder="Enter email address"><br>
-      <input type="text" name="phonenum" class="form-control" placeholder="Enter phone number"><br>
-      <input type="password" name="password" class="form-control" placeholder="Enter password"><br>
-      <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm password"><br>
-      <input type="submit" name="submit" value="Sign Up" class="btn btn-primary"><br>
-      <a href="themes/prizelessdigital/sign-in.php" class="btn btn-danger">Cancel</a>
-    </form>
+  <main class="main container-fluid">
+    <div class="content-center">
 
-  </div>
-</div>
+      <div class="form-wrapper">
+        <div class="form-header">
+          <h2>Signup</h2>
+          <p>Be a part of our company database...</p>
+        </div>
+        <div class="form-body">
+            <form action="./../../includes/signup.inc.php" method="POST">
 
+              <div class="input-wrapper">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control"/>
+              </div>
 
-<!-- Javascript files -->
-<script src="themes/prizelessdigital/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+              <div class="input-wrapper">
+                <label>Email Address</label>
+                <input type="email" name="email" class="form-control"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label>Phone Number</label>
+                <input type="text" name="phonenum" class="form-control"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label>Confirm Password</label>
+                <input type="password" name="confirmpassword" class="form-control"/>
+              </div>
+
+              <div class="btn-wrapper">
+                <a href="themes/prizelessdigital/sign-in.php" class="btn btn-danger">Cancel</a>
+                <input type="submit" name="submit" value="Sign Up" class="btn btn-primary"/>
+              </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="footer">
+      <div class="inner">
+
+      </div>
+  </footer>
+
+  <!-- Javascript files -->
+  <script src="themes/prizelessdigital/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
