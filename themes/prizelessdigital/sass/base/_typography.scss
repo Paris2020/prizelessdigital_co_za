@@ -48,27 +48,24 @@ h4,
 h5,
 h6 {
   color: $black;
+  font-family: $font-family;
 }
 
 
 @mixin h1 {
-  font-family: $font-family;
   font-size: 36px;
 }
 
 @mixin h2 {
-  font-family: $font-family;
   font-size: 24px;
 }
 
 @mixin h3 {
-  font-family: $font-family;
   font-size: 16px;
   @include font-regular;
 }
 
 @mixin h4 {
-  font-family: $font-family;
   text-transform: uppercase;
   line-height: 20px;
   height: 30px;
@@ -121,3 +118,12 @@ sup, sub {
   font-size: 75% !important;
 }
 
+header, footer{
+  text-align: center;
+}
+
+header, main, footer{
+  .inner{
+    margin: 20px;
+  }
+}
