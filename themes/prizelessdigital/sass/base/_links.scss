@@ -1,0 +1,21 @@
+// LINK STYLES
+// =============================================================================
+
+a,
+a:link,
+a:visited, {
+  text-decoration: none;
+  color: $link;
+  &:hover {
+    color: lighten($burgundy,10%);;
+    text-decoration: none;
+    img {
+      @include opacity(0.75);
+    }
+  }
+}
+
+
+a.btn-danger{
+  @include button($red);
+}
