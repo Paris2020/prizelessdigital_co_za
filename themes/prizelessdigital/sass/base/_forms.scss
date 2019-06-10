@@ -78,8 +78,8 @@ input[type="radio"].error + label.option span
 // FORM LABELS
 // =============================================================================
 label {
-  font-weight: normal;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 // REQUIRED COLOR
@@ -93,4 +93,37 @@ label {
 textarea {
   max-width: 100%;
   min-height: 400px;
+}
+
+
+// MAIN FORM STYLING
+// =============================================================================
+
+
+.form-wrapper{
+  max-width: 35%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 2px 5px 20px $box-grey;
+  .form-header{
+    background-color: $form-blue;
+    padding: 20px;
+    h2,p {
+      color: $white;
+      @include font-bold;
+    }
+  }
+
+  .form-body{
+    padding: 20px;
+    form{
+      .input-wrapper{
+        margin-bottom: 20px;
+      }
+      .btn-wrapper{
+        text-align: center;
+      }
+    }
+  }
+
 }
