@@ -3,12 +3,24 @@
 
 $black: #000;
 $white: #fff;
-$grey: #7c7c7c;
+$grey: #dddddd;
+$green: #09896f;
+$red: #d52a32;
+$blue: #055885;
+$burgundy: #bc3869;
+
+
+$link: $burgundy;
+
+
+$green-rgba: rgba(9, 137, 111,0.90);
 
 // DOTS
 $light-brown: #997d66;
 $light-blue: #86ccd5;
-$light-grey: #f1f5f7;
+$light-grey: #efefef;
+$focus-color: $blue;
+$focus: $focus-color;
 
 $body-text: $black;
 
