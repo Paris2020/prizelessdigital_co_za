@@ -1,0 +1,122 @@
+// FONT INCLUDES
+// =============================================================================
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+$font-family: 'Open Sans';
+
+
+// FONT MIXINS
+// =============================================================================
+
+@mixin font-light {
+  font-family: 'Open Sans',Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+@mixin font-regular {
+  font-family: 'Open Sans',Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-semibold {
+  font-family: 'Open Sans',Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-family: 'Open Sans',Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+
+// BASE FONT
+// =============================================================================
+
+html {
+  @include font-regular;
+  font-size: 18px;
+}
+
+
+// HEADER STYLES
+// =============================================================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+}
+
+
+@mixin h1 {
+  font-family: $font-family;
+  font-size: 36px;
+}
+
+@mixin h2 {
+  font-family: $font-family;
+  font-size: 24px;
+}
+
+@mixin h3 {
+  font-family: $font-family;
+  font-size: 16px;
+  @include font-regular;
+}
+
+@mixin h4 {
+  font-family: $font-family;
+  text-transform: uppercase;
+  line-height: 20px;
+  height: 30px;
+}
+
+@mixin h5 {
+  font-weight: bold;
+  line-height: 2.5;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5{
+  @include h5;
+}
+
+
+// TEXT STYLES
+// =============================================================================
+b, strong { font-weight: bold; }
+em { font-style: italic; }
+
+p{
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+  margin: 20px 0;
+}
+
+sup, sub {
+  font-size: 75% !important;
+}
