@@ -1,7 +1,8 @@
 <?php
 
   session_start();
-  include './../../includes/db_connect.inc.php';
+  dirname(__FILE__ . 'includes/db_connect.inc.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +13,7 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="themes/prizelessdigital/styles.css">
 </head>
@@ -36,6 +38,7 @@
         <div class="form-header">
           <h2>Signup</h2>
           <p>Be a part of our company database...</p>
+          <i class="fal fa-pencil"></i>
         </div>
         <div class="form-body">
             <form action="./../../includes/signup.inc.php" method="POST">
