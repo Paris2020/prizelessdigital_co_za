@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include './../../includes/db_connect.inc.php';
+  dirname(__FILE__ . 'includes/db_connect.inc.php');
 
   $username = $_SESSION['username'];
 ?>
