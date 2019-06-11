@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Paris2020/prizelessgigital_co_za#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
