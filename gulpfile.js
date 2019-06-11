@@ -24,7 +24,7 @@ var root = themename + '/',
     //db_connect = root + 'includes/db_connect.inc.php'
 
 
-var phpWatchFiles = root + '**/*.php',
+var phpWatchFiles = '**/*.php',
     indexPhpWatchFile = 'index.php',
     styleWatchFiles = scss + '**/*.scss';
 
@@ -89,8 +89,7 @@ function watch(){
         open: 'external',
         proxy: domain,
         baseDir: './',
-        files: [ root + 'styles.css',
-                 root + '/src/js/*.js'],
+
         ghostMode: {
             clicks: true,
             forms: true,
