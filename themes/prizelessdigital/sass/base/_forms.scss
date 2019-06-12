@@ -45,7 +45,7 @@ input[type="submit"]
 
 // STANDARD FORM STYLES
 // =============================================================================
-input[type="text"].form-control ,
+input[type="text"].form-control,
 input[type="password"],
 input[type="email"],
 textarea
@@ -105,15 +105,23 @@ textarea {
   display: block;
   margin: 0 auto;
   box-shadow: 2px 5px 20px $box-grey;
+  &.signup{
+    .form-header{
+      background-color: $form-blue;
+    }
+  }
+  &.signin{
+    .form-header{
+      background-color: $burgundy;
+    }
+  }
   .form-header{
-    background-color: $form-blue;
     padding: 20px;
     h2,p {
       color: $white;
       @include font-bold;
     }
   }
-
   .form-body{
     padding: 20px;
     form{
@@ -122,8 +130,10 @@ textarea {
       }
       .btn-wrapper{
         text-align: center;
+        input, span, a{
+          margin: 0 auto 10px;
+        }
       }
     }
   }
-
 }
