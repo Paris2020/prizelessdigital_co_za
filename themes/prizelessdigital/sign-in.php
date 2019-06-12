@@ -13,9 +13,9 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital Assessment</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="themes/pricelessdigital/styles.css">
+  <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="src/css/bootstrap-4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="grid">
 
@@ -23,7 +23,7 @@
   <header class="header">
     <div class="inner">
       <div class="img-wrapper">
-        <img src="themes/prizelessdigital/src/images/logo.jpg"/>
+        <img src="src/images/logo.jpg"/>
       </div>
     </div>
   </header>
@@ -32,16 +32,25 @@
   <main class="main container">
     <div class="content-center">
 
-      <div class="form-wrapper">
+      <div class="form-wrapper signin">
         <div class="form-header">
-          <h3>Signin</h3>
+          <h2>Signin</h2>
           <p>See whats going at Prizeless Digital</p>
+          <i class="fal fa-pencil"></i>
         </div>
         <div class="form-body">
-          <form action="./../../includes/signin.inc.php" method="POST">
+          <form id="signin" action="includes/signin.inc.php" method="POST">
 
-            <input type="email" name="email" class="form-control">
-            <input type="password" name="password" class="form-control">
+            <div class="input-wrapper">
+              <label>Username</label>
+              <input type="email" name="email" class="form-control">
+            </div>
+
+            <div class="input-wrapper">
+              <label>Password</label>
+              <input type="password" name="password" class="form-control">
+            </div>
+
 
             <div class="btn-wrapper">
               <input type="submit" name="submit" value="Sign In" class="btn btn-primary">
@@ -63,6 +72,6 @@
   </footer>
 
   <!-- Javascript files -->
-  <script src="themes/prizelessdigital/src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+  <script src="src/js/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
