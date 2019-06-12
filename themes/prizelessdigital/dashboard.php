@@ -14,6 +14,7 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital</title>
+  <link href="src/css/fontawesome-5.9.0/css/fontawesome.css" rel="stylesheet">
   <link rel="stylesheet" href="themes/prizelessdigital/src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="themes/prizelessdigital/styles.css">
 </head>

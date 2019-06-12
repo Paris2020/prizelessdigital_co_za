@@ -13,7 +13,7 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital Assessment</title>
-  <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.min.css">
+  <link href="src/css/fontawesome-5.9.0/css/fontawesome.css" rel="stylesheet">
   <link rel="stylesheet" href="src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -36,7 +36,7 @@
         <div class="form-header">
           <h2>Signin</h2>
           <p>See whats going at Prizeless Digital</p>
-          <i class="fal fa-pencil"></i>
+          <i class="fas fa-lock"></i>
         </div>
         <div class="form-body">
           <form id="signin" action="includes/signin.inc.php" method="POST">
