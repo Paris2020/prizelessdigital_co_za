@@ -13,7 +13,6 @@
   <meta name="description" content="Sign up and login form.">
   <meta name="author" content="Nelly Moseki, Junior Frontend Developer">
   <title>Prizeless Digital Assessment</title>
-  <link href="src/css/fontawesome-5.9.0/css/fontawesome.css" rel="stylesheet">
   <link rel="stylesheet" href="src/css/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,7 +22,7 @@
   <header class="header">
     <div class="inner">
       <div class="img-wrapper">
-        <img src="src/images/logo.jpg"/>
+
       </div>
     </div>
   </header>
