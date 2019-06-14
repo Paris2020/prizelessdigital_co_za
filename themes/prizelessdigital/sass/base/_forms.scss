@@ -130,10 +130,19 @@ textarea {
       }
       .btn-wrapper{
         text-align: center;
+        margin-top: 30px;
         input, span, a{
           margin: 0 auto 10px;
         }
       }
+    }
+  }
+}
+
+#signin{
+  .btn-wrapper{
+    input, span, a{
+      display: block;
     }
   }
 }
