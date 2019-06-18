@@ -16,6 +16,7 @@
 ._
 .idea
 .DS_Store
+.gitignore
 /themes/prizelessdigital/sass/.DS_Store
 /themes/prizelessdigital/.DS_Store
 
