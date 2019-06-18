@@ -33,9 +33,9 @@
 
       <div class="form-wrapper signin">
         <div class="form-header">
-          <h2>Signin</h2>
+          <h2>Signin <i class="fas fa-lock fa-2x"></i></h2>
           <p>See whats going at Prizeless Digital</p>
-          <i class="fas fa-lock"></i>
+
         </div>
         <div class="form-body">
           <form id="signin" action="includes/signin.inc.php" method="POST">
