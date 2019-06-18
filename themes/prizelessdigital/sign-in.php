@@ -22,7 +22,7 @@
   <header class="header">
     <div class="inner">
       <div class="img-wrapper">
-
+        <img src="src/images/logo.jpg"/>
       </div>
     </div>
   </header>
