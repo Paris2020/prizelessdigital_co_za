@@ -79,7 +79,8 @@
   </main>
   <footer class="footer">
       <div class="inner">
-
+        <p><small>&copy; 2019 All Rights Reserved</small><br>
+        <small><a href="https://www.prizelessdigital.co.za">www.prizelessdigital.co.za</a></small></p>
       </div>
   </footer>
 
