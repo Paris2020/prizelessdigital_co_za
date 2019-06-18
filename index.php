@@ -23,7 +23,7 @@
   <header class="header">
     <div class="inner">
       <div class="img-wrapper">
-
+        <img src="themes/prizelessdigital/src/images/logo.jpg"/>
       </div>
     </div>
   </header>
