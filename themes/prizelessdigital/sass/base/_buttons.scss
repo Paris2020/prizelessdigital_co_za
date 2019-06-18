@@ -15,8 +15,9 @@
   line-height: 1em;
   padding: $padding;
   &:hover {
-    background-color: rgba($color, 0.2) !important;
+    background-color: rgba($color, 0.2);
     text-decoration: none;
+    color: $color;
   }
 }
 
