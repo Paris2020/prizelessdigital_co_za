@@ -101,10 +101,19 @@ textarea {
 
 
 .form-wrapper{
-  max-width: 35%;
+  width: 35%;
   display: block;
   margin: 0 auto;
   box-shadow: 2px 5px 20px $box-grey;
+  @include breakpoint($small){
+    width: 100%;
+  }
+  @include breakpoint($mobile){
+    width: 70%;
+  }
+  @include breakpoint($desktop){
+    width: 90%;
+  }
   &.signup{
     .form-header{
       background-color: $form-blue;
@@ -120,6 +129,9 @@ textarea {
     h2{
       i{
         float: right;
+        @include breakpoint($small){
+          padding: 10px;
+        }
       }
     }
     h2,p {
