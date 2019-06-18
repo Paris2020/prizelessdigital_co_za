@@ -37,9 +37,10 @@
         </div>
       </div>
 
-      <div class="container-fluid">
-        <div class="row text-center">
+      <div class="container-fluid text-center">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia ut nisi ac sagittis. </p>
 
+        <div class="row text-center">
           <div class="col-sm-4">
               <div class="card">
                 <div class="img-wrapper">
@@ -83,7 +84,8 @@
     </main>
     <footer class="footer">
       <div class="inner">
-
+        <p><small>&copy; 2019 All Rights Reserved</small><br>
+        <small><a href="https://www.prizelessdigital.co.za">www.prizelessdigital.co.za</a></small></p>
       </div>
     </footer>
     <!-- Javascript files -->
