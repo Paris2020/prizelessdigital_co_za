@@ -35,9 +35,8 @@
 
       <div class="form-wrapper signup">
         <div class="form-header">
-          <h2>Signup</h2>
+          <h2>Signup <i class="fas fa-pencil-alt fa-2x"></i></h2>
           <p>Be a part of our company database...</p>
-          <i class="fas fa-pencil-alt"></i>
         </div>
         <div class="form-body">
             <form id="signup" action="includes/signup.inc.php" method="POST">
