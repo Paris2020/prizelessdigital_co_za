@@ -116,7 +116,12 @@ textarea {
     }
   }
   .form-header{
-    padding: 20px;
+    padding: $gutter*2;
+    h2{
+      i{
+        float: right;
+      }
+    }
     h2,p {
       color: $white;
       @include font-bold;
