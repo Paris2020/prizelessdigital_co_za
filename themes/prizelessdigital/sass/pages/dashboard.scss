@@ -6,17 +6,13 @@
   margin-top: $gutter;
   .card{
     .img-wrapper{
-      width: 100%;
-      height: auto;
       img{
         width:100%;
       }
     }
     .card-body{
-      .card-title{
-        .btn-large{
-           @include button($burgundy);
-        }
+      .btn-large{
+         @include button($burgundy);
       }
     }
   }
