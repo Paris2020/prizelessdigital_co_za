@@ -3,15 +3,35 @@
 
 .container-fluid{
   width: 90%;
-  .card{
-    .img-wrapper{
-      img{
-        width:100%;
-      }
+  @include breakpoint($tablet){
+    width: 100%;
+  }
+  .col-sm-4{
+    @include breakpoint($mobile){
+      margin-bottom: $gutter;
     }
-    .card-body{
-      .btn-large{
-         @include button($burgundy);
+    .card{
+      .img-wrapper{
+        img{
+          width:100%;
+        }
+      }
+      .card-body{
+        .card-title{
+          @include breakpoint($mobile){
+            font-size: 20px;
+            height: 25px;
+            line-height: 1.2rem;
+          }
+        }
+        .card-text{
+          @include breakpoint($mobile){
+            margin: 10px 0;
+          }
+        }
+        .btn-large{
+          @include button($burgundy);
+        }
       }
     }
   }
