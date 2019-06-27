@@ -1,9 +1,10 @@
 <?php
 
   session_start();
-  include './../../includes/db_connect.inc.php';
+  include (dirname(__FILE__) . '/includes/db_connect.inc.php');
 
   if(isset($_POST['submit'])){
+
 
     #Fetch data entered in the form and submit to the the database.
 
@@ -17,7 +18,7 @@
     #Check if any field is left empty
     if(empty($username) || empty($email) || empty($phonenum) || empty($password) || empty($confirmpass)){
       #Return the user to the form
-      header("Location: index.php?EMPTY=FIELDS=DETECTED");
+      header("Location: ../index.php?EMPTY=FIELDS=DETECTED");
       exit();
 
     }else{
@@ -25,7 +26,7 @@
 
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Invalid email address entry')</script>";
-        echo "<script>window.open('index.php','_self')</script>";
+        echo "<script>window.open('../index.php','_self')</script>";
       }else{
         #Let's make sure that the email address doesn't already exist in the database
 
@@ -37,7 +38,7 @@
         #If the passwords are not the same return the user to the form
         #Display and error message
 
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
 
       }else{
