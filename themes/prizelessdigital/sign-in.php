@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  dirname(__FILE__ . 'includes/db_connect.inc.php');
+  include (dirname(__FILE__) . '/includes/db_connect.inc.php');
 
 ?>
 
@@ -44,13 +44,10 @@
               <label>Username</label>
               <input type="email" name="email" class="form-control">
             </div>
-
             <div class="input-wrapper">
               <label>Password</label>
               <input type="password" name="password" class="form-control">
             </div>
-
-
             <div class="btn-wrapper">
               <input type="submit" name="submit" value="Sign In" class="btn btn-primary">
               <span>OR</span>
