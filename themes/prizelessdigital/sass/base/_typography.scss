@@ -63,7 +63,7 @@ h6 {
 
 @mixin h3 {
   font-size: 16px;
-  @include font-regular;
+  @include montserrat-regular;
 }
 
 @mixin h4 {
@@ -117,18 +117,4 @@ p{
 
 sup, sub {
   font-size: 75% !important;
-}
-header{
-  margin-bottom: 20px;
-  .inner{
-    padding: 20px;
-    background-color: $white;
-  }
-}
-header, footer{
-  text-align: center;
-}
-
-header, main, footer{
-
 }
