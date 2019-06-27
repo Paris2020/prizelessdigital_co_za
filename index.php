@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  dirname(__FILE__ . 'includes/db_connect.inc.php');
+  include (dirname(__FILE__) . '/includes/db_connect.inc.php');
 
 ?>
 
@@ -39,37 +39,33 @@
           <p>Be a part of our company database...</p>
         </div>
         <div class="form-body">
-            <form id="signup" action="includes/signup.inc.php" method="POST">
+            <form id="signup" action="themes/prizelessdigital/includes/signup.inc.php" method="POST">
 
               <div class="input-wrapper">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control"/>
               </div>
-
               <div class="input-wrapper">
                 <label>Email Address</label>
                 <input type="email" name="email" class="form-control"/>
               </div>
-
               <div class="input-wrapper">
                 <label>Phone Number</label>
                 <input type="text" name="phonenum" class="form-control"/>
               </div>
-
               <div class="input-wrapper">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control"/>
               </div>
-
               <div class="input-wrapper">
                 <label>Confirm Password</label>
                 <input type="password" name="confirmpassword" class="form-control"/>
               </div>
-
               <div class="btn-wrapper">
                 <a href="themes/prizelessdigital/sign-in.php" class="btn btn-danger">Cancel</a>
                 <input type="submit" name="submit" value="Sign Up" class="btn btn-primary"/>
               </div>
+
           </form>
         </div>
       </div>
